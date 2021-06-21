@@ -194,6 +194,8 @@ export class EnterServer extends Component<Props, State> {
 
                   <TextInput
                     testID="server-url"
+                    accessibilityLabel="server-url"
+                    accessible={true}
                     style={styles.input}
                     autoCapitalize="none"
                     autoFocus={true}
