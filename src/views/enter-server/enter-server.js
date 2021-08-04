@@ -214,6 +214,7 @@ export class EnterServer extends Component<Props, State> {
                     style={[formStyles.button, isDisabled ? formStyles.buttonDisabled : null]}
                     disabled={isDisabled}
                     testID="next"
+                    accessibilityLabel="next"
                     onPress={() => this.onApplyServerUrlChange()}>
                     <Text style={[formStyles.buttonText, isDisabled && formStyles.buttonTextDisabled]}>Next</Text>
                     {connecting && <ActivityIndicator style={styles.progressIndicator}/>}

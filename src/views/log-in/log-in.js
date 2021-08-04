@@ -171,6 +171,7 @@ export class LogIn extends Component<Props, State> {
                     autoCorrect={false}
                     editable={!loggingIn}
                     testID="login-input"
+                    accessibilityLabel="login-input"
                     style={styles.inputUser}
                     placeholder="Username or email"
                     placeholderTextColor={uiThemeColors.$icon}
@@ -184,6 +185,7 @@ export class LogIn extends Component<Props, State> {
                     ref={this.passInputRef}
                     editable={!loggingIn}
                     testID="password-input"
+                    accessibilityLabel="password-input"
                     style={styles.inputPass}
                     placeholder="Password"
                     placeholderTextColor={uiThemeColors.$icon}
@@ -203,6 +205,7 @@ export class LogIn extends Component<Props, State> {
                     ]}
                     disabled={loggingIn || hasNoCredentials}
                     testID="log-in"
+                    accessibilityLabel="log-in"
                     onPress={this.logInViaCredentials}>
                     <Text
                       style={[formStyles.buttonText, hasNoCredentials && formStyles.buttonTextDisabled]}>
