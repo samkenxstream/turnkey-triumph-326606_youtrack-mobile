@@ -24,9 +24,5 @@ public class MainActivity extends ReactActivity {
     View v = findViewById(android.R.id.content);
     v.setFilterTouchesWhenObscured(true);
 
-    getWindow().setFlags(
-      WindowManager.LayoutParams.FLAG_SECURE,
-      WindowManager.LayoutParams.FLAG_SECURE
-    );
   }
 }
