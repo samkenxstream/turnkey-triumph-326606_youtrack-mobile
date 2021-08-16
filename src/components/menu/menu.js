@@ -176,14 +176,15 @@ class Menu extends Component<Props, State> {
         animation="fadeIn"
 
         testID="menu"
+        accessible={true}
         style={styles.menu}
       >
         <MenuItem
           testId="menuIssues"
           accessibilityLabel="menuIssues"
-          accessible={true}
           icon={<IconTask
             testID="menuIssuesIcon"
+            accessibilityLabel="menuIssuesIcon"
             isActive={this.isActiveRoute(routeMap.Issues)}
             size={23}
             color={color(routeMap.Issues)}
@@ -194,7 +195,6 @@ class Menu extends Component<Props, State> {
         <MenuItem
           testId="menuAgile"
           accessibilityLabel="menuAgile"
-          accessible={true}
           icon={<IconBoard size={28} color={color(routeMap.AgileBoard)}/>}
           onPress={this.openAgileBoard}
         />
@@ -203,7 +203,6 @@ class Menu extends Component<Props, State> {
           <MenuItem
             testId="menuNotifications"
             accessibilityLabel="menuNotifications"
-            accessible={true}
             icon={<IconBell size={22} color={color(routeMap.Inbox)}/>}
             onPress={this.openInbox}
           />
@@ -213,7 +212,6 @@ class Menu extends Component<Props, State> {
           <MenuItem
             testId="menuKnowledgeBase"
             accessibilityLabel="menuKnowledgeBase"
-            accessible={true}
             icon={<IconKnowledgeBase size={22} color={color(routeMap.KnowledgeBase)}/>}
             onPress={this.openKnowledgeBase}
           />
@@ -222,7 +220,6 @@ class Menu extends Component<Props, State> {
         <MenuItem
           testId="menuSettings"
           accessibilityLabel="menuSettings"
-          accessible={true}
           icon={<IconSettings size={21} color={color(routeMap.Settings)}/>}
           onPress={this.openSettings}
         />
