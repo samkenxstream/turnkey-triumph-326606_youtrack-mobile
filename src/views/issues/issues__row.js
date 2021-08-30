@@ -63,7 +63,7 @@ export default class IssueRow extends Component<Props, void> {
         {(theme: Theme) => (
           <TouchableOpacity
             onPress={() => this.props.onClick(issue)}
-            testID="issue-row"
+            testID="test:id/issue-row"
             accessibilityLabel="issue-row"
           >
             <View style={styles.row}>
@@ -93,7 +93,7 @@ export default class IssueRow extends Component<Props, void> {
                   issue.resolved ? {color: EStyleSheet.value('$resolved')} : null,
                 ]}
                 numberOfLines={2}
-                testID="issue-row-summary">
+                testID="test:id/issue-row-summary">
                 {issue.summary}
               </Text>
 
