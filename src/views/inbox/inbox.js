@@ -39,6 +39,8 @@ import type {Notification, Metadata, ChangeValue, ChangeEvent, Issue, IssueChang
 import type {Reaction} from '../../flow/Reaction';
 import type {Theme} from '../../flow/Theme';
 import type {User} from '../../flow/User';
+import {HIT_SLOP} from "../../components/common-styles/button";
+import {IconAdd} from "../../components/icon/icon";
 
 
 type Props = InboxState & typeof inboxActions;
@@ -327,7 +329,9 @@ class Inbox extends Component<Props, State> {
     };
 
     return (
-      <View style={styles.notification}>
+      <View
+        testID="test:id/notification-row"
+        style={styles.notification}>
         <View><Text style={[styles.textPrimary, styles.notificationIssueInfo]}>{`${title}:`}</Text></View>
 
         <View style={[styles.notificationContent, styles.notificationContentWorkflow]}>
@@ -454,7 +458,9 @@ class Inbox extends Component<Props, State> {
     const issue: IssueOnList = comment.issue;
 
     return (
-      <View style={styles.notification}>
+      <View
+        testID="test:id/notification-row"
+        style={styles.notification}>
         <UserInfo
           avatar={
             <View style={styles.reactionIcon}>
@@ -497,7 +503,9 @@ class Inbox extends Component<Props, State> {
     }
 
     return (
-      <View style={styles.notification}>
+      <View
+        testID="test:id/notification-row"
+        style={styles.notification}>
         <UserInfo style={styles.userInfo} user={sender} timestamp={change?.endTimestamp}/>
 
         <View style={styles.notificationContent}>
