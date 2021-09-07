@@ -193,7 +193,7 @@ export class EnterServer extends Component<Props, State> {
                   </View>
 
                   <TextInput
-                    testID="server-url"
+                    testID="test:id/server-url"
                     accessibilityLabel="server-url"
                     accessible={true}
                     style={styles.input}
@@ -213,7 +213,7 @@ export class EnterServer extends Component<Props, State> {
                   <TouchableOpacity
                     style={[formStyles.button, isDisabled ? formStyles.buttonDisabled : null]}
                     disabled={isDisabled}
-                    testID="next"
+                    testID="test:id/next"
                     accessibilityLabel="next"
                     onPress={() => this.onApplyServerUrlChange()}>
                     <Text style={[formStyles.buttonText, isDisabled && formStyles.buttonTextDisabled]}>Next</Text>

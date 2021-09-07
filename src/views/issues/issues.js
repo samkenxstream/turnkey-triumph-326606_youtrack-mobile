@@ -111,6 +111,7 @@ export class Issues extends Component<Props, State> {
     return (
       <TouchableOpacity
         hitSlop={HIT_SLOP}
+        testID="test:id/create-issue-button"
         style={styles.createIssueButton}
         onPress={() => Router.CreateIssue()}
         disabled={isDisabled}
@@ -164,6 +165,8 @@ export class Issues extends Component<Props, State> {
     return (
       <TouchableOpacity
         key="issueListContext"
+        accessible={true}
+        testID = "test:id/issue-list-context"
         style={[
           styles.searchContext,
           isSearchContextPinned ? styles.searchContextPinned : null,
@@ -287,6 +290,7 @@ export class Issues extends Component<Props, State> {
           />
           <TouchableOpacity
             style={styles.userSearchQueryButton}
+            testID="test:id/user-search-query-button"
             onPress={openSavedSearchesSelect}
           >
             <IconBookmark size={28} color={uiTheme.colors.$link}/>

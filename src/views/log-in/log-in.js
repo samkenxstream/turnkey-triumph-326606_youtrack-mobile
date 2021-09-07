@@ -170,7 +170,7 @@ export class LogIn extends Component<Props, State> {
                     autoCapitalize="none"
                     autoCorrect={false}
                     editable={!loggingIn}
-                    testID="login-input"
+                    testID="test:id/login-input"
                     accessibilityLabel="login-input"
                     style={styles.inputUser}
                     placeholder="Username or email"
@@ -184,7 +184,7 @@ export class LogIn extends Component<Props, State> {
                   <TextInput
                     ref={this.passInputRef}
                     editable={!loggingIn}
-                    testID="password-input"
+                    testID="test:id/password-input"
                     accessibilityLabel="password-input"
                     style={styles.inputPass}
                     placeholder="Password"
@@ -204,7 +204,7 @@ export class LogIn extends Component<Props, State> {
                       (loggingIn || hasNoCredentials) && formStyles.buttonDisabled,
                     ]}
                     disabled={loggingIn || hasNoCredentials}
-                    testID="log-in"
+                    testID="test:id/log-in"
                     accessibilityLabel="log-in"
                     onPress={this.logInViaCredentials}>
                     <Text
