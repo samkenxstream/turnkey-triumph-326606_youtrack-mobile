@@ -242,6 +242,9 @@ class AgileBoard extends Component<Props, State> {
           style={styles.zoomButton}
         >
           <TouchableOpacity
+            testID="magnifier-button"
+            accessibilityLabel="magnifier-button"
+            accessible={true}
             hitSlop={HIT_SLOP}
             onPress={this.toggleZoom}
           >

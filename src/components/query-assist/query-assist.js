@@ -146,6 +146,8 @@ export default class QueryAssist extends Component<Props, State> {
 
         <TouchableOpacity
           testID="query-assist-cancel"
+          accessibilityLabel="query-assist-cancel"
+          accessible={true}
           onPress={() => {
             this.cancelSearch();
             onClose();
@@ -158,6 +160,8 @@ export default class QueryAssist extends Component<Props, State> {
           ref="searchInput"
 
           testID="query-assist-input"
+          accessibilityLabel="query-assist-input"
+          accessible={true}
           style={styles.searchInput}
 
           placeholderTextColor={styles.clearIcon.color}

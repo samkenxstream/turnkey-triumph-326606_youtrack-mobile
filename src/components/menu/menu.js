@@ -179,10 +179,10 @@ class Menu extends Component<Props, State> {
         style={styles.menu}
       >
         <MenuItem
-          testID="test:id/menuIssues"
           icon={<IconTask
-            testID="menuIssuesIcon"
-            accessibilityLabel="menuIssuesIcon"
+            testID="menuIssues"
+            accessibilityLabel="menuIssues"
+            accessible={true}
             isActive={this.isActiveRoute(routeMap.Issues)}
             size={23}
             color={color(routeMap.Issues)}
@@ -191,14 +191,19 @@ class Menu extends Component<Props, State> {
         />
 
         <MenuItem
-          testID="test:id/menuAgile"
-          icon={<IconBoard size={28} color={color(routeMap.AgileBoard)}/>}
+          icon={<IconBoard
+            testID="menuAgile"
+            accessibilityLabel="menuAgile"
+            accessible={true}
+            size={28} color={color(routeMap.AgileBoard)}/>}
           onPress={this.openAgileBoard}
         />
 
         <Feature version={FEATURE_VERSION.inbox}>
           <MenuItem
-            testID="test:id/menuNotifications"
+            testID="menuNotifications"
+            accessibilityLabel="menuNotifications"
+            accessible={true}
             icon={<IconBell size={22} color={color(routeMap.Inbox)}/>}
             onPress={this.openInbox}
           />
@@ -206,14 +211,18 @@ class Menu extends Component<Props, State> {
 
         <Feature version={FEATURE_VERSION.knowledgeBase}>
           <MenuItem
-            testID="test:id/menuKnowledgeBase"
+            testID="menuKnowledgeBase"
+            accessibilityLabel="menuKnowledgeBase"
+            accessible={true}
             icon={<IconKnowledgeBase size={22} color={color(routeMap.KnowledgeBase)}/>}
             onPress={this.openKnowledgeBase}
           />
         </Feature>
 
         <MenuItem
-          testID="test:id/menuSettings"
+          testID="menuSettings"
+          accessibilityLabel="menuSettings"
+          accessible={true}
           icon={<IconSettings size={21} color={color(routeMap.Settings)}/>}
           onPress={this.openSettings}
         />

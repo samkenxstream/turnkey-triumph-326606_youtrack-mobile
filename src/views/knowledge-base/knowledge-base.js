@@ -131,7 +131,9 @@ export class KnowledgeBase extends Component<Props, State> {
         <>
           <View style={styles.item}>
             <TouchableOpacity
-              testID="test:id/project-title-item"
+              testID="project-title-item"
+              accessibilityLabel="project-title-item"
+              accessible={true}
               disabled={hasSearchQuery}
               style={styles.itemProject}
               onPress={() => this.props.toggleProjectVisibility(section)}
@@ -307,7 +309,9 @@ export class KnowledgeBase extends Component<Props, State> {
         ListFooterComponent={() =>
           !isLoading && !hideSearchPanel && <View style={styles.listFooter}>
             <TouchableOpacity
-              testID="test:id/manage-favorite-projects"
+              testID="manage-favorite-projects"
+              accessibilityLabel="manage-favorite-projects"
+              accessible={true}
               hitSlop={HIT_SLOP}
               onPress={this.openProjectSelect}
             >
@@ -346,7 +350,9 @@ export class KnowledgeBase extends Component<Props, State> {
     return (
       <View style={styles.actionBar}>
         <TouchableOpacity
-          testID="test:id/collapse-all"
+          testID="collapse-all"
+          accessibilityLabel="collapse-all"
+          accessible={true}
           disabled={!isToggleButtonEnabled}
           hitSlop={HIT_SLOP}
           onPress={() => this.props.toggleAllProjects()}
@@ -356,7 +362,9 @@ export class KnowledgeBase extends Component<Props, State> {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          testID="test:id/drafts"
+          testID="drafts"
+          accessibilityLabel="drafts"
+          accessible={true}
           disabled={isLoading}
           hitSlop={HIT_SLOP}
           style={styles.actionBarButton}
