@@ -562,6 +562,8 @@ class Inbox extends Component<Props, State> {
         onRefresh={this.refresh}
         tintColor={this.theme.uiTheme.colors.$link}
         testID="refresh-control"
+        accessibilityLabel="refresh-control"
+        accessible={true}
       />
     );
   };
