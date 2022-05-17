@@ -158,18 +158,12 @@ export class IssueActivity extends PureComponent<IssueActivityProps, State> {
               }
               this.loadIssueActivities();
             }}
-            userAppearanceProfile={this.getUserAppearanceProfile()}
+            userAppearanceProfile={this.props.user.profiles.appearance}
             uiTheme={uiTheme}
           />
         </BottomSheetModal>
       </>
     );
-  }
-
-  getUserAppearanceProfile(): UserAppearanceProfile | { naturalCommentsOrder: boolean } {
-    const DEFAULT_USER_APPEARANCE_PROFILE = {naturalCommentsOrder: true};
-    const {user} = this.props;
-    return user?.profiles?.appearance || DEFAULT_USER_APPEARANCE_PROFILE;
   }
 
   _renderActivities(uiTheme: UITheme) {
@@ -206,7 +200,7 @@ export class IssueActivity extends PureComponent<IssueActivityProps, State> {
     return (
       <View style={styles.activitiesContainer}>
         <IssueActivityStream
-          activities={createActivityModel(activityPage, this.getUserAppearanceProfile().naturalCommentsOrder)}
+          activities={createActivityModel(activityPage, user.profiles.appearance.naturalCommentsOrder)}
           attachments={issue?.attachments}
           actionSheet={this.context.actionSheet}
           issueFields={issue?.fields}
