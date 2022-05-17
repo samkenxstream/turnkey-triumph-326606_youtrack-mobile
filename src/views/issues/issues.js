@@ -506,7 +506,7 @@ export class Issues extends Component<Props, State> {
         tintColor={this.theme.uiTheme.colors.$link}
 
         onEndReached={this.onEndReached}
-        onEndReachedThreshold={0.1}
+        onEndReachedThreshold={5}
       />
     );
   }
