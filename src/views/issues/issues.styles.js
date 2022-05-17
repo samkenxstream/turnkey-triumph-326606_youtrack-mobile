@@ -236,4 +236,7 @@ export default EStyleSheet.create({
     paddingLeft: UNIT,
   },
   loadingIndicator: StyleSheet.absoluteFillObject,
+  avatar: {
+    marginLeft: UNIT,
+  },
 });

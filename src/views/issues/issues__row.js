@@ -79,14 +79,15 @@ export default class IssueRow extends Component<Props, void> {
                     {getReadableID(issue)}
                   </Text>
 
-                  {Boolean(issue.updated || issue.reporter) && <View style={styles.headRight}>
-                    {!!issue.updated && <Text style={styles.secondaryText}>{`${ytDate(issue.updated)}  `}</Text>}
-                    {!issue.reporter && <Avatar
+                  <View style={styles.headRight}>
+                    <Text style={styles.secondaryText}>{ytDate(issue.updated > 0 ? issue.updated : issue.created)}</Text>
+                    {!!issue?.reporter && <Avatar
+                      style={styles.avatar}
                       userName={getEntityPresentation(issue.reporter)}
                       size={20}
-                      source={{uri: issue.reporter?.avatarUrl}}
+                      source={{uri: issue?.reporter?.avatarUrl}}
                     />}
-                  </View>}
+                  </View>
                 </View>
 
                 <Text
